@@ -1,7 +1,7 @@
 // Load JSON data
 let films = [];
 
-fetch("data.json")
+fetch('data.json')
     .then(response => response.json())
     .then(data => {
         films = data;
@@ -65,11 +65,31 @@ function filterTable() {
 
 // Sort table
 function sortTable() {
-    const sortBy = document.getElementById('sort').value;
+    const sortBy = document.getElementById('sort').value; // Get the field to sort by
+    const sortOrder = document.getElementById('sort-order').value; // Get the sorting order (asc/desc)
+
     const sortedFilms = [...films].sort((a, b) => {
-        if (a[sortBy] < b[sortBy]) return -1;
-        if (a[sortBy] > b[sortBy]) return 1;
-        return 0;
+        let comparison = 0;
+
+        // Compare based on the selected field
+        if (sortBy === 'title') {
+            comparison = a.title.localeCompare(b.title);
+        } else if (sortBy === 'release_year') {
+            comparison = a.release_year - b.release_year;
+        } else if (sortBy === 'box_office') {
+            comparison = a.box_office - b.box_office;
+        }
+
+        // Reverse the comparison for descending order
+        if (sortOrder === 'desc') {
+            comparison = -comparison;
+        }
+
+        return comparison;
     });
+
     renderTable(sortedFilms);
 }
+
+// Initial render
+renderTable(films);

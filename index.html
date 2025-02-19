@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film Database</title>
+    <title>Highest-grossing films</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Film Database</h1>
+        <h1>Highest-grossing films according to <a href="https://en.wikipedia.org/wiki/List_of_highest-grossing_films">Wikipedia</a></h1>
+        <h3> <i> Made by <a href="https://github.com/DavidVista">@DavidVista</a> </i> </h3>
         <div class="controls">
             <input type="text" id="search" placeholder="Search by title..." oninput="filterTable()">
             <select id="sort" onchange="sortTable()">
                 <option value="title">Sort by Title</option>
                 <option value="release_year">Sort by Release Year</option>
                 <option value="box_office">Sort by Box Office</option>
+            </select>
+            <select id="sort-order" onchange="sortTable()">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
             </select>
         </div>
         <table id="filmTable">
