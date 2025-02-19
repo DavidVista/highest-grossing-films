@@ -88,7 +88,7 @@
         "release_year": 2015,
         "director": "James Wan",
         "box_office": 1515000000.0,
-        "country": "United States China"
+        "country": "United States;China"
     },
     {
         "title": "Top Gun: Maverick",
@@ -205,7 +205,7 @@
     {
         "title": "Captain America: Civil War",
         "release_year": 2016,
-        "director": "Anthony RussoJoe Russo;Anthony Russo;Joe Russo",
+        "director": "Anthony Russo;Joe Russo",
         "box_office": 1155000000.0,
         "country": "United States"
     },
@@ -233,7 +233,7 @@
     {
         "title": "Captain Marvel",
         "release_year": 2019,
-        "director": "Anna BodenRyan Fleck",
+        "director": "Anna Boden;Ryan Fleck",
         "box_office": 1131000000.0,
         "country": "United States"
     },
