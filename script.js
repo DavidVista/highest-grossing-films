@@ -39,7 +39,7 @@ function renderTable(data) {
 
         // Box Office
         const boxOfficeCell = document.createElement('td');
-        boxOfficeCell.textContent = `${film.box_office.toLocaleString()}`;
+        boxOfficeCell.textContent = `$${film.box_office.toLocaleString()}`;
         row.appendChild(boxOfficeCell);
 
         // Countries
